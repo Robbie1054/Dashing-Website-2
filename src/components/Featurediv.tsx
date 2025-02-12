@@ -27,7 +27,7 @@ const featureItems = [
 ];
 
 export default function FeatureDiv() {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div className="flex flex-col items-center w-full">

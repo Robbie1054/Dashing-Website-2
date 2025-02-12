@@ -4,10 +4,9 @@ import {
   motion,
   useTransform,
   useScroll,
-  useVelocity,
   useSpring,
 } from "framer-motion";
-import { cn } from "@/lib/utils";
+
 
 export default function Process() {
   const ref = useRef<HTMLDivElement>(null);

@@ -12,7 +12,6 @@ type Testimonial = {
   src: string;
 };
 
-
 const defaultTestimonials: Testimonial[] = [
   {
     quote: "This platform has transformed how we manage our brokerage operations.",
@@ -24,14 +23,14 @@ const defaultTestimonials: Testimonial[] = [
     quote: "The best solution we've found for our brokerage needs.",
     name: "Jane Smith",
     designation: "Director, Trading Co",
-    src: "/testimonials/Sonar.png"
+    src: "/testimonials/Sonar.png",
   },
   {
     quote: "The best solution we've found for our brokerage needs.",
     name: "Jane Smith",
     designation: "Director, Trading Co",
-    src: "/testimonials/K1.png"
-  }
+    src: "/testimonials/K1.png",
+  },
 ];
 
 const StarRating = ({ rating = 5 }) => {
@@ -54,11 +53,6 @@ export default function Testimonials({
   testimonials?: Testimonial[];
   autoplay?: boolean;
 }) {
-  
-  if (!testimonials || testimonials.length === 0) {
-    return null;
-  }
-
   const [active, setActive] = useState(0);
 
   const handleNext = () => {
@@ -78,18 +72,26 @@ export default function Testimonials({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]); // Added handleNext to dependency array
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
+  if (!testimonials || testimonials.length === 0) {
+    return null;
+  }
+
   return (
     <div>
       {/* Header section */}
       <div className="text-center max-w-4xl mx-auto mb-4">
-        <h1 className="text-4xl font-bold mb-4 text-black">Don't Just Take our Word for it!</h1>
+        <h1 className="text-4xl font-bold mb-4 text-black">
+          Don&apos;t Just Take our Word for it!
+        </h1>
         <p className="text-xl text-gray-600">
-          Our users consistently praise our software for its user-friendly interface, advanced features and robust security.
+          Our users consistently praise our software for its user-friendly
+          interface, advanced features and robust security.
         </p>
       </div>
       {/* Main content section - Added border and shadow */}
