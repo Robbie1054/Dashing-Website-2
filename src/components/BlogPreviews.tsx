@@ -30,11 +30,44 @@ const blogCards: Card[] = [
 ];
 
 export default function BlogPreviews() {
+  const [current, setCurrent] = useState(0);
+
+  // Use static transform values instead of random rotations
+  const transforms = {
+    initial: {
+      opacity: 0,
+      transform: "translateZ(-100px) scale(0.9)" 
+    },
+    animate: {
+      opacity: 1,
+      transform: "translateZ(0) scale(1)"
+    },
+    exit: {
+      opacity: 0,
+      transform: "translateZ(-100px) scale(0.9)"
+    }
+  };
+
   return (
-    <div className="w-full">
-      <Carousel items={blogCards.map((card, index) => (
-        <Card key={index} card={card} index={index} />
-      ))} />
+    <div className="relative w-[120vmin] h-[40vmin] mx-auto">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={current}
+          initial={transforms.initial}
+          animate={transforms.animate}
+          exit={transforms.exit}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut"
+          }}
+        >
+          <div className="w-full">
+            <Carousel items={blogCards.map((card, index) => (
+              <Card key={index} card={card} index={index} />
+            ))} />
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { IconBriefcase } from '@tabler/icons-react'; // Add this import at the top
 import { BsStars } from "react-icons/bs";
 

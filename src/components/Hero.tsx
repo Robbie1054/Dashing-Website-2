@@ -21,7 +21,6 @@ import {
 } from "@tabler/icons-react";
 import { BsStars } from "react-icons/bs";
 import { IconSearch } from "@tabler/icons-react";
-import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
