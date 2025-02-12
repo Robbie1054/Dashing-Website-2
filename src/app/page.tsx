@@ -16,9 +16,13 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Navbar />
       <MacbookScroll src="/DashingScreenshot.png" />
-      <div className="flex flex-col gap-20 w-full -mt-[400px]"> {/* Added -mt-40 to pull content up */}
+      <div className="flex flex-col gap-20 w-full -mt-[400px]"> 
         <Partners/>
-        <InfoBox/>
+        <div className="flex flex-col gap-8"> 
+          <h1 className="text-4xl font-bold text-center">Unlock Unparralled Efficiency</h1>
+          <h2 className="text-xl text-gray-600 text-center">Streamline Processes, optimise Inventory, and Supercharge Your Sales Team with Our Cutting-Edge Solution</h2>
+          <InfoBox/>
+        </div>
         <WobbleCard />
         <Integrationsdiv/>
         <Testimonials />

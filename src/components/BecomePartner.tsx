@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { IconBriefcase } from '@tabler/icons-react'; // Add this import at the top
 import { BsStars } from "react-icons/bs";
 
 export default function BecomePartner() {
@@ -25,13 +23,14 @@ export default function BecomePartner() {
         setIsHovering(false);
         setMousePosition({ x: 0, y: 0 });
       }}
+      initial={{ opacity: 1 }}
       style={{
         transform: isHovering
           ? `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0) scale3d(1, 1, 1)`
           : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
         transition: "transform 0.1s ease-out",
       }}
-      className="mx-auto w-[60%] bg-blue-400 relative rounded-2xl overflow-hidden p-4"
+      className="mx-auto w-[60%] bg-[#22263e] relative rounded-2xl overflow-hidden"
     >
       <div
     className="relative h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.9),rgba(3, 196, 255, 0.8))] sm:mx-0 sm:rounded-2xl overflow-hidden"
@@ -68,7 +67,7 @@ export default function BecomePartner() {
 const Noise = () => {
   return (
     <div
-      className="absolute inset-0 w-full h-full scale-[100%] transform opacity-100 mb-6"
+      className="absolute inset-0 w-full h-full scale-100 transform opacity-100"
       style={{
         backgroundImage: "url('/bgtest.svg')",
         backgroundSize: "60%",

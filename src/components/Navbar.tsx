@@ -13,7 +13,7 @@ export default function Navbar() {
                 alt="Logo"
                 width={100}
                 height={100}
-                className="h-10 w-auto"
+                className="h-15 w-auto"
               />
              
             </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded'>
+            <button className='bg-[#22263e] hover:bg-blue-700 text-white font-medium font-semibold py-2 px-4 rounded-xl'>
                 Book a Demo 
             </button>
           </div>
