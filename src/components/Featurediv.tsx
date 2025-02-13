@@ -9,17 +9,16 @@ const featureItems = [
   {
     id: 1,
     title: "Interactive Dashboard",
-    description: "Experience a colorful and informative dashboard with an interactive map to visualize your global business reach. Monitor sales, invoicing, quote-to-order ratios, and company performance against targets with shortcut icons for easy navigation.",
+    description: "Set and monitor company and individual sales targets in various currencies. Track quote-to-order ratios, customer maintenance, and merge companies with different offices or trading names for effective management.",
     link: "/features/market-data"
   },
   {
     id: 2,
     title: "Sales Management",
-    description: "Set and monitor company and individual sales targets in various currencies. Track quote-to-order ratios, customer maintenance, and merge companies with different offices or trading names for effective management.",
+    description: "Set and monitor company and individual sales targets in various currencies. Track quote-to-order ratios, customer maintenance, and merge companies with different offices or trading names for effective management",
     link: "/features/automated-trading"
   },
   {
-    id: 3,
     title: "Quoting",
     description: "Create, manage, and send quotes using live franchised stock and price checkers. Add descriptions and images, handle single-line items or full BOMs, and customize pricing margins. Easily offer price breaks with instant second-line addition.",
     link: "/features/risk-management"
@@ -88,8 +87,7 @@ export default function FeatureDiv() {
         <Link 
           href="/features" 
           className="px-8 py-3 bg-[#22263e] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg inline-block"
-        >
-          Explore More Features
+        > Explore More Features 
         </Link>
       </div>
     </div>
@@ -125,7 +123,7 @@ const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-black text-2xl  font-bold tracking-wide mt-4 dark:text-white", className)}>
+    <h4 className={cn("text-black text-2xl font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -141,7 +139,7 @@ const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-grey-400 tracking-wide leading-relaxed text-m dark:text-white",
+        " text-grey-400 mt-8 text-zinc-600 tracking-wide leading-relaxed text-sm",
         className
       )}
     >

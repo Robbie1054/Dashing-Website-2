@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        barlow: ['var(--font-barlow)', 'sans-serif'],
         foreground: "var(--foreground)",
       },
     },

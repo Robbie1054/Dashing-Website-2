@@ -8,13 +8,10 @@
   --font-barlow: 'Barlow', sans-serif;
 }
 
-[data-theme='dark'] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: var(--font-barlow);
   font-family: var(--font-barlow);
 }

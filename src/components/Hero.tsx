@@ -87,9 +87,10 @@ export default function MacbookScroll({
               translateY: textTransform,
               opacity: textOpacity,
             }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white border border-gray-200 text-sm text-gray-600 dark:bg-slate-950 dark:text-white"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-white border border-gray-200 text-sm text-gray-600"
           >
             <BsStars className="w-4 h-4 text-blue-500" />
+            <span className="font-semibold">Unlock Full Distribution Capability</span>
             <span className="font-semibold">Unlock Full Distribution Capability</span>
           </motion.div>
 
@@ -98,13 +99,13 @@ export default function MacbookScroll({
               translateY: textTransform,
               opacity: textOpacity,
             }}
-            className="dark:text-white text-neutral-800 text-5xl font-semibold mb-12 text-center"
+            className="text-gray-400 text-lg mb-6 max-w-5xl mx-auto"
           >
-            {title || (
-              <span>
+            
+              <span className="font-semibold text-5xl text-black">
                 Software Built By Brokers For Brokers
               </span>
-            )}
+          
           </motion.h2>
           <motion.p
             style={{
@@ -112,14 +113,15 @@ export default function MacbookScroll({
               opacity: textOpacity,
             }}
             className="text-gray-400 text-lg mb-6 max-w-2xl mx-auto"
+            className="text-gray-400 text-lg mb-6 max-w-2xl mx-auto"
           >
             Empower your business with cutting-edge software to manage, optimise, and expand
             your distribution operations seamlessly.
           </motion.p>
           <motion.div className="mb-12">
             <button className="px-8 py-3 bg-[#22263e] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-          Get Started
-        </button>
+              Get Started
+            </button>
           </motion.div>
         </div>
       {/* Lid */}

@@ -47,19 +47,19 @@ export default function Navbar() {
             </Link>
             <Link 
               href="/about-us" 
-              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium dark:text-white"
+              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium"
             >
               About Us
             </Link>
             <Link 
               href="/features" 
-              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium dark:text-white"
+              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium"
             >
               Features
             </Link>
             <Link 
               href="/your-data" 
-              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium dark:text-white"
+              className="text-gray-900 hover:text-gray-600 px-3 py-2 text-m font-medium"
             >
               Your Data
             </Link>

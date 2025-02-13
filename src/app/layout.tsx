@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Barlow } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -9,6 +9,7 @@ const barlow = Barlow({
   weight: ['400', '500', '600', '700'],
   variable: '--font-barlow',
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,9 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${barlow.variable}`}>
-      <body className="font-barlow">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body className="font-barlow">{children}</body>
     </html>
   );
 };

@@ -1,10 +1,8 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-
 const featureItems = [
   {
     id: 1,
@@ -92,10 +90,8 @@ const featureItems = [
   }
   
 ];
-
 export default function FeatureDiv() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <div className="flex flex-col items-center w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 w-[60%] mx-auto gap-4">
@@ -134,7 +130,6 @@ export default function FeatureDiv() {
     </div>
   );
 }
-
 const Card = ({
   className,
   children,
@@ -155,7 +150,6 @@ const Card = ({
     </div>
   );
 };
-
 const CardTitle = ({
   className,
   children,
@@ -169,7 +163,6 @@ const CardTitle = ({
     </h4>
   );
 };
-
 const CardDescription = ({
   className,
   children,
