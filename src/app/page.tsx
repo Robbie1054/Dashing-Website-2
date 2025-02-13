@@ -1,5 +1,11 @@
-import MacbookScroll from "@/components/Hero";
-import Navbar from "@/components/Navbar";
+"use client";
+import dynamic from 'next/dynamic';
+const MacbookScroll = dynamic(() => import('@/components/Hero'), {
+  ssr: false
+});
+const Navbar = dynamic(() => import('@/components/Navbar'), {
+  ssr: false
+});
 import InfoBox from '@/components/Featurediv';
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";

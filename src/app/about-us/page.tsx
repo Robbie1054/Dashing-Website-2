@@ -1,6 +1,14 @@
-import Navbar from "@/components/Navbar";
+
+"use client";
+
+import dynamic from 'next/dynamic';
+const Navbar = dynamic(() => import('@/components/Navbar'), {
+  ssr: false
+});
 import Footer from "@/components/Footer";
-import Carousel from "@/components/Carousel";
+const Carousel = dynamic(() => import('@/components/Carousel'), {
+  ssr: false
+});
 
 export default function Home() {
   return (
