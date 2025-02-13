@@ -1,21 +1,15 @@
 "use client";
 
-// Remove Lottie import
-import Image from 'next/image';
+import Lottie from '@lottielab/lottie-player/react';
+
 
 export default function Integrationsdiv() {
   return (
     <div className="max-w-[60%] mx-auto py-20">
       <div className="flex items-center justify-between gap-12">
         {/* Video section */}
-        <div className="w-1/2 relative aspect-video rounded-lg overflow-hidden h-[415px]">
-          <Image
-            src="/.gif"
-            alt="Integration animation"
-            fill
-            className="object-cover rounded-lg"
-            priority
-          />
+        <div className="w-1/2 relative aspect-video rounded-lg overflow-hidden h-[450px]">
+          <Lottie src="https://cdn.lottielab.com/l/DaMe3bMrT5PELo.json" autoplay />
         </div>
 
         {/* Content section */}

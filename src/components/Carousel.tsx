@@ -2,6 +2,7 @@
 
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import Image from 'next/image'
 
 // Update the slides data and interface
 const slides = [
@@ -101,12 +102,16 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
+          <Image
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
             src={src}
+            alt="Office interior" // Added alt text
+            fill // Added fill prop
+            sizes="(max-width: 768px) 100vw, 80vw" // Added sizes prop
+            priority // Added priority for above-the-fold images
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Barlow } from 'next/font/google'
+import {Barlow } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 const barlow = Barlow({
   subsets: ['latin'],

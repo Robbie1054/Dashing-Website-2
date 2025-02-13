@@ -40,7 +40,7 @@ export default function Process() {
   );
 
   return (
-    <div className="relative w-[60%] mx-auto h-full mb-64">
+    <div className="relative w-[60%] mx-auto h-full mb-12">
       <div className="flex justify-between items-center gap-8"> {/* Changed items-start to items-center */}
         {/* Left section */}
         <div className="w-[45%] flex flex-col justify-center min-h-[600px]"> {/* Added flex, justify-center and min-height */}
