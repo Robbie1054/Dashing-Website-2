@@ -18,8 +18,8 @@ export default function Home() {
       <div className="flex flex-col gap-20 w-full -mt-[400px]"> 
         <Partners/>
         <div className="flex flex-col gap-8"> 
-          <h1 className="text-4xl font-bold text-center">Unlock Unparralled Efficiency</h1>
-          <h2 className="text-xl text-gray-600 text-center">Streamline Processes, optimise Inventory, and Supercharge Your Sales Team with Our Cutting-Edge Solution</h2>
+          <h1 className="text-4xl font-bold text-center ">Unlock Unparralled Efficiency</h1>
+          <h2 className="text-xl text-gray-400 text-center">Streamline Processes, optimise Inventory, and Supercharge Your Sales Team with Our Cutting-Edge Solution</h2>
           <InfoBox/>
         </div>
         <WobbleCard />
