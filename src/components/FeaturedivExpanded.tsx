@@ -41,7 +41,56 @@ const featureItems = [
     title: "Shipping Management",
     description: "Integrate EasyPost with your system to manage shipments, collections, and deliveries. Track packages online, and generate commercial invoices and customs paperwork effortlessly.",
     link: "/features/risk-management"
+  },
+  {
+    id: 7,
+    title: "Purchasing",
+    description: "Streamline purchasing with one-click online purchasing for web shop suppliers, authorized spend control on purchase orders, and management of back orders, sourcing, and resourcing. Receive detailed email notifications for purchase order arrivals.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 8,
+    title: "Quality Management",
+    description: "Ensure ISO compliance with a multi-step inspection process, visual inspection checklists, incoming inspection reports, and non-conforming material management. Track inspection authorizations and manage the RMA process with up-to-date analysis.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 10,
+    title: "Financial Control",
+    description: "Integrate your accounting software API for a fully compatible interface, reducing manual errors and streamlining invoicing. Generate live financial reports and manage multi-currency invoices effortlessly.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 11,
+    title: "Excess Stock Management",
+    description: "Optimize excess stock management with a dedicated dashboard, live monitoring of bids, quotes, and purchases, consigned inventory tracking, and stock and financial report generation. Incorporate WooCommerce Auto Posting for added efficiency.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 12,
+    title: "User Stock Management",
+    description: "Customize user permissions with pre-set profiles or create your own. Add user personnel files and commission structures for a flexible, tailored experience.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 13,
+    title: "Business Reporting",
+    description: "Utilize a full range of business reporting tools in our reporting suite to keep track of your business in real-time.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 14,
+    title: "Web-based Secure Access Anywhere",
+    description: "Access your data securely from anywhere and on any device, keeping your information safe and under your control.",
+    link: "/features/risk-management"
+  },
+  {
+    id: 15,
+    title: "Flexible Licensing",
+    description: "Activate licenses with one click for easy, fast onboarding of new users. Available in most languages and currencies for global compatibility.",
+    link: "/features/risk-management"
   }
+  
 ];
 
 export default function FeatureDiv() {
@@ -82,16 +131,6 @@ export default function FeatureDiv() {
           </Link>
         ))}
       </div>
-      
-      {/* Added button section */}
-      <div className="mt-8 mb-12">
-        <Link 
-          href="/features" 
-          className="px-8 py-3 bg-[#22263e] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg inline-block"
-        >
-          Explore More Features
-        </Link>
-      </div>
     </div>
   );
 }
@@ -106,7 +145,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-gray-200 shadow-lg group-hover:shadow-xl transition-all duration-200 relative z-20 dark:bg-slate-950",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-gray-200 shadow-lg group-hover:shadow-xl transition-all duration-200 relative z-20 dark:bg-[#22263e]",
         className
       )}
     >
@@ -125,7 +164,7 @@ const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-black text-2xl  font-bold tracking-wide mt-4 dark:text-white", className)}>
+    <h4 className={cn("text-zinc-900 font-bold tracking-wide mt-4 dark:text-white", className)}>
       {children}
     </h4>
   );
@@ -141,7 +180,7 @@ const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-grey-400 tracking-wide leading-relaxed text-m dark:text-white",
+        "mt-8 text-zinc-600 tracking-wide leading-relaxed text-sm dark:text-white",
         className
       )}
     >

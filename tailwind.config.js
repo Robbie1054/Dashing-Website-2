@@ -14,7 +14,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        barlow: ['var(--font-barlow)', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     addVariablesForColors,
