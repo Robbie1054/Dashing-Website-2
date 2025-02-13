@@ -13,7 +13,8 @@ export const useOutsideClick = (
   }, []);
 
   useEffect(() => {
-    if (!isMounted) return;
+    // Ensure this only runs on the client side
+    if (!isMounted || typeof document === "undefined") return;
 
     const listener = (event: MouseEvent | TouchEvent) => {
       if (!ref.current || ref.current.contains(event.target as Node)) {
