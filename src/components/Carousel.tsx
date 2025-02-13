@@ -1,9 +1,6 @@
 "use client";
-
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
-import Image from 'next/image'
-
 // Update the slides data and interface
 const slides = [
   {
@@ -13,11 +10,9 @@ const slides = [
     src: "/interior.webp"
   }
 ];
-
 interface SlideData {
   src: string;
 }
-
 // Update the SlideProps interface
 interface SlideProps {
   slide: SlideData;
@@ -25,57 +20,43 @@ interface SlideProps {
   current: number;
   handleSlideClick: (index: number) => void;
 }
-
 // Modify the Slide component to remove title and button
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
-
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef<number | null>(null);
-
   useEffect(() => {
     const animate = () => {
       if (!slideRef.current) return;
-
       const x = xRef.current;
       const y = yRef.current;
-
       slideRef.current.style.setProperty("--x", `${x}px`);
       slideRef.current.style.setProperty("--y", `${y}px`);
-
       frameRef.current = requestAnimationFrame(animate);
     };
-
     frameRef.current = requestAnimationFrame(animate);
-
     return () => {
       if (frameRef.current) {
         cancelAnimationFrame(frameRef.current);
       }
     };
   }, []);
-
   const handleMouseMove = (event: React.MouseEvent) => {
     const el = slideRef.current;
     if (!el) return;
-
     const r = el.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
   };
-
   const handleMouseLeave = () => {
     xRef.current = 0;
     yRef.current = 0;
   };
-
   const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
     event.currentTarget.style.opacity = "1";
   };
-
   const { src } = slide;
-
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
@@ -102,16 +83,12 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <Image
+          <img
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
             src={src}
-            alt="Office interior" // Added alt text
-            fill // Added fill prop
-            sizes="(max-width: 768px) 100vw, 80vw" // Added sizes prop
-            priority // Added priority for above-the-fold images
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
@@ -121,13 +98,11 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     </div>
   );
 };
-
 interface CarouselControlProps {
   type: string;
   title: string;
   handleClick: () => void;
 }
-
 const CarouselControl = ({
   type,
   title,
@@ -145,29 +120,23 @@ const CarouselControl = ({
     </button>
   );
 };
-
 // Change to default export and remove props
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
-
   const handlePreviousClick = () => {
     const previous = current - 1;
     setCurrent(previous < 0 ? slides.length - 1 : previous);
   };
-
   const handleNextClick = () => {
     const next = current + 1;
     setCurrent(next === slides.length ? 0 : next);
   };
-
   const handleSlideClick = (index: number) => {
     if (current !== index) {
       setCurrent(index);
     }
   };
-
   const id = useId();
-
   return (
     <div
       className="relative w-[120vmin] h-[40vmin] mx-auto"
@@ -189,14 +158,12 @@ export default function Carousel() {
           />
         ))}
       </ul>
-
       <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
           handleClick={handlePreviousClick}
         />
-
         <CarouselControl
           type="next"
           title="Go to next slide"
