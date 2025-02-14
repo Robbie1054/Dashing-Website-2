@@ -8,9 +8,8 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
+      fontFamily: {
         barlow: ['var(--font-barlow)', 'sans-serif'],
-        foreground: "var(--foreground)",
       },
     },
   },

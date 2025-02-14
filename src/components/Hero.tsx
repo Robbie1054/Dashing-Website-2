@@ -91,7 +91,6 @@ export default function MacbookScroll({
           >
             <BsStars className="w-4 h-4 text-blue-500" />
             <span className="font-semibold">Unlock Full Distribution Capability</span>
-            <span className="font-semibold">Unlock Full Distribution Capability</span>
           </motion.div>
 
           <motion.h2
@@ -113,11 +112,15 @@ export default function MacbookScroll({
               opacity: textOpacity,
             }}
             className="text-gray-400 text-lg mb-6 max-w-2xl mx-auto"
-            className="text-gray-400 text-lg mb-6 max-w-2xl mx-auto"
           >
             Empower your business with cutting-edge software to manage, optimise, and expand
             your distribution operations seamlessly.
           </motion.p>
+          <motion.div className="mb-12">
+            <button className="px-8 py-3 bg-[#22263e] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg">
+              Get Started
+            </button>
+          </motion.div>
           <motion.div className="mb-12">
             <button className="px-8 py-3 bg-[#22263e] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg">
               Get Started
