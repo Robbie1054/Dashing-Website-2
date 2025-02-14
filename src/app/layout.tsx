@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {Barlow } from 'next/font/google'
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+
 
 
 const barlow = Barlow({
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable}`}>
       <body className="font-barlow">
-        <ThemeProvider>{children}</ThemeProvider>
+        <body>{children}</body>
       </body>
     </html>
   );

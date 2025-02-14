@@ -2,14 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTheme } from "@/components/ThemeProvider";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 
 
 
 export default function Navbar() {
 
-  const { theme, toggleTheme } = useTheme();
+
   return (
     <nav className="top-0 w-full z-50 bg-white dark:bg-gray-800 border-gray-200 dark:bg-slate-950">
       
@@ -17,22 +16,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-            {theme === "light" ? (
                 <Image
                 src="/logo.svg" 
                 alt="Logo"
                 width={100}
                 height={100}
-                className="h-15 w-auto"
-                /> ) : (
-              <Image
-                src="/logodark.svg" 
-                alt="Logo"
-                width={100}
-                height={100}
-                className="h-15 w-auto"
-              />
-                )}
+                className="h-15 w-auto">
+
+                </Image>
+             
+                
             
             </Link>
           </div>
@@ -78,16 +71,6 @@ export default function Navbar() {
             <button className='bg-[#22263e] hover:bg-blue-700 text-white font-medium font-semibold py-2 px-4 rounded-xl'>
                 Book a Demo 
             </button>
-            <button
-        onClick={toggleTheme}
-        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-      >
-        {theme === "light" ? (
-          <IconMoon className="w-5 h-5" />
-        ) : (
-          <IconSun className="w-5 h-5 text-white" />
-        )}
-      </button>
           </div>
         </div>
       </div>
