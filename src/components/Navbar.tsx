@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { IconMoon, IconSun } from "@tabler/icons-react";
+
 
 
 
